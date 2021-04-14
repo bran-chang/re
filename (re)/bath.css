@@ -1,0 +1,146 @@
+body {
+  background-color: #bfe0e9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg {
+  width: 100vw;
+  height: 100%;
+  border-radius: 5px;
+  position: fixed;
+  z-index: -100;
+}
+  
+.main-header {
+    color: #01546f;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+  }
+
+.join-main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+    font-family: LuloCleanOneBold, sans-serif;
+  }
+  
+  .join-main-section .categories-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-top: 5rem;
+  }
+  
+  .join-text {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .section-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10em;
+  }
+
+  .section-description .stat{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    transform: scale(3);
+  }
+
+  .section-description .section-info {
+    margin: 1em;
+  }
+
+  .question {
+    font-family: LuloCleanOneBold, sans-serif;
+    font-size: 1.2rem;
+  }
+
+  .fact {
+      font-size: 2rem;
+      font-weight: 400;
+      padding-bottom: 2.5em;
+  }
+  
+.info2 {
+  margin-left: 5em;
+  margin-right: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.start-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20em;
+  width: 60%;
+}
+
+.tips {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.choice {
+  padding-bottom: 5em;
+  padding-top: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.choice p{
+  font-family: LuloCleanOneBold, sans-serif;
+  color: #01546f;
+  font-size: 3em;
+  text-align: center;
+}
+
+.choice .a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.option {
+  padding-top: 7em;
+  padding-left: 7em;
+  padding-right: 7em;
+  padding-bottom: 4em;
+  border: 0.2rem, solid, white;
+  text-decoration: none;
+  font-family: LuloCleanOneBold, sans-serif;
+  color: #01546f;
+  font-size: 1rem;
+}
+
+  @media (max-width: 900px) {
+    .join-main-section {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }

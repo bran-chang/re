@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+  <title>(re)</title>
+</head>
+<body class="container full-height-grow">
+  <h1 class="reduce">(re)duce</h1>
+  <h1 class="reuse">(re)use</h1>
+  <h1 class="recycle">(re)cycle</h1>
+  <section class="home-main-section">
+    <div class="call-to-action">
+        <div class="call-to-action1">
+        <h1 class="title">(RE)</h1>
+        <span class="subtitle">the green guide</span>
+        </div>
+      <a href="#categories" class="btn"></a>
+    </div>
+  </section>
+  <div class="container full-height-growth" id="categories">
+    <div class="question-text">
+      <h1 class="hide-question">
+        <span class="text" id="categories"> where would you like to start?</span>
+      </h1>
+    </div>
+    <div class="cont s--inactive">
+      <!-- cont inner start -->
+      <div class="cont__inner">
+        <!-- el start -->
+        <div class="el"><a href="bath.html"></a>
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading"><a href="bath.html">Bath</a></h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Bath</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">1</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="1">1</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading"><a href="kitchen.html">Kitchen</a></h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Kitchen</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">2</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="2">2</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading"><a href="clean.html">Clean</a></h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Clean</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">3</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="3">3</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading"><a href="health.html">Health</a></h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Health</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">4</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="4">4</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+        <!-- el start -->
+        <div class="el">
+          <div class="el__overflow">
+            <div class="el__inner">
+              <div class="el__bg"></div>
+              <div class="el__preview-cont">
+                <h2 class="el__heading"><a href="garden.html">Garden</a></h2>
+              </div>
+              <div class="el__content">
+                <div class="el__text">Garden</div>
+                <div class="el__close-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="el__index">
+            <div class="el__index-back">5</div>
+            <div class="el__index-front">
+              <div class="el__index-overlay" data-index="5">5</div>
+            </div>
+          </div>
+        </div>
+        <!-- el end -->
+      </div>
+      <!-- cont inner end -->
+    </div>
+
+    <script>
+      var $cont = document.querySelector('.cont');
+      var $elsArr = [].slice.call(document.querySelectorAll('.el'));
+      var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
+      
+      setTimeout(function() {
+        $cont.classList.remove('s--inactive');
+      }, 200);
+      
+      $elsArr.forEach(function($el) {
+        $el.addEventListener('click', function() {
+          if (this.classList.contains('s--active')) return;
+          $cont.classList.add('s--el-active');
+          this.classList.add('s--active');
+        });
+      });
+      
+      $closeBtnsArr.forEach(function($btn) {
+        $btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          $cont.classList.remove('s--el-active');
+          document.querySelector('.el.s--active').classList.remove('s--active');
+        });
+      });
+    </script>
+
+    <!--<section class="join-main-section">
+      <div class="categories-main">
+        <h1 class="join-text"><a href="bath.html">Bath</a></h1>
+        <h1 class="join-text"><a href="kitchen.html">Kitchen</a></h1>
+        <h1 class="join-text"><a href="clean.html">Clean</a></h1>
+        <h1 class="join-text"><a href="health.html">Health</a></h1>
+        <h1 class="join-text"><a href="garden.html">Garden</a></h1>
+      </div>-->
+  
+      <!--<form class="join-form">
+        <div class="input-group">
+          <label>Name:</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label>Email:</label>
+          <input type="email">
+        </div>
+        <div class="input-group">
+          <label>Password:</label>
+          <input type="password">
+        </div>
+        <div class="input-group">
+          <button type="submit" class="btn">Join Now</button>
+        </div>
+      </form>-->
+    </section>
+    <header class="main-header">
+      <a href="/" class="brand-logo">
+        <div class="brand-logo-name">(RE)</div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="about.html">about</a></li>
+          <!--<li><a href="join.html">Join</a></li>-->
+        </ul>
+      </nav>
+    </header>
+    <!--<div class="slider"></div>-->
+  </div>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>-->
+  <script src="./app.js"></script>
+  <!--<div class="home-page-circle-1"></div>
+  <div class="home-page-circle-2"></div>
+  <div class="home-page-circle-3"></div>-->
+</body>
+</html>
